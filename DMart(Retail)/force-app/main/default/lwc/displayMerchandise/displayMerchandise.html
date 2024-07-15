@@ -1,0 +1,14 @@
+<!-- Child component html to take display data which has been forwarded by parent component using @api decorator
+-->
+
+<template>
+    <lightning-card>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={searchmer}
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+</lightning-card>
+</template>

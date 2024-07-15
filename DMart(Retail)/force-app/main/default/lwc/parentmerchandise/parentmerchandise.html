@@ -1,0 +1,18 @@
+<!-- Here we have done component composition we have defined two child component named as searchMerchandise 
+ and displayMerchandise inside parent component named as parentmerchandise we are getting data from one child 
+ component name as searchMerchandise using custom event and passing that data to second child component named
+ as displayMerchandise using @api decorator to display the data -->
+<template>
+    <lightning-card>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item padding="around-small" size="4">
+                <c-search-merchandise ongetmerchandisedata={handlemerchandisedata} ongetmerchandisedatabystock={getmerchandisedatabystock}></c-search-merchandise>
+                
+                <!-- <c-search-merchandise ongetmerchandisedatabystock={handlemerchandisedata}></c-search-merchandise> -->
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="8">
+                <c-display-Merchandise searchmer={searchDetails}></c-display-Merchandise>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>    
+</template>

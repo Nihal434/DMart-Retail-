@@ -1,0 +1,19 @@
+<!-- Child component html to take input from user to search merchandise by name
+ this component is going to bind with parent component which is a parentmerchandise
+ whatever changes user is going to do in given field of child component searchMerchandise 
+ is going to forward with the help of customEvent named as getmerchandisedata
+-->
+<template>
+    <lightning-card>
+        <lightning-input name="myMerName" label="Merchandise Name" type="String" value={merchName} onchange={handlechangeMerchName}></lightning-input>
+        <lightning-input name="myMerStock" label="Merchandise Stock" type="Integer" value={merchStock} onchange={handlechangeMerchStock}></lightning-input>
+        <lightning-button variant="brand" label="Search Merchandise" title="Click here to initiate" onclick={handleMerchandiseSearch}></lightning-button>
+    </lightning-card>
+
+    <!-- <lightning-card>
+         <lightning-input name="myMerName" label="Merchandise Name" type="String" value={merchName} onchange={handlechangeMerchName}></lightning-input>  
+        <lightning-input name="myMerStock" label="Merchandise Stock" type="Integer" value={merchStock} onchange={handlechangeMerchStock}></lightning-input>
+        <lightning-button variant="brand" label="Search Merchandise by Stock" title="Click here to initiate" onclick={handleMerchandiseStockSearch}></lightning-button>
+    </lightning-card> -->
+    
+</template>
